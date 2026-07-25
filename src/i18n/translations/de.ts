@@ -89,6 +89,7 @@ export const de: Translations = {
       category: 'Full Stack / 2025',
       description:
         'E-Commerce-Plattform mit entkoppelter Frontend/Backend-Architektur (React + Spring Boot) für Produktverwaltung, Benutzerauthentifizierung und Kaufabwicklung.',
+      tabs: ['Shop-Ansicht', 'Admin-Bereich'],
     },
   },
   skills: {

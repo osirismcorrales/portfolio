@@ -15,9 +15,10 @@ interface ProjectCardProps {
   title: string;
   category: string;
   description: string;
+  tabs?: string[];
 }
 
-export function ProjectCard({ project, index, title, category, description }: ProjectCardProps) {
+export function ProjectCard({ project, index, title, category, description, tabs }: ProjectCardProps) {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const isEven = index % 2 !== 0;
 
@@ -53,6 +54,7 @@ export function ProjectCard({ project, index, title, category, description }: Pr
                 activeImageIndex={activeImageIndex}
                 setActiveImageIndex={setActiveImageIndex}
                 title={title}
+                tabs={tabs}
               />
             )}
           </div>
@@ -124,6 +126,7 @@ interface ShowcaseProps {
   activeImageIndex: number;
   setActiveImageIndex: (i: number) => void;
   title: string;
+  tabs?: string[];
 }
 
 function MobileShowcase({ gallery, hasGallery, activeImageIndex, setActiveImageIndex, title }: ShowcaseProps) {
@@ -191,7 +194,7 @@ function MobileShowcase({ gallery, hasGallery, activeImageIndex, setActiveImageI
 
 /* ─── Desktop Showcase (Clean, no browser frame) ─── */
 
-function DesktopShowcase({ gallery, hasGallery, activeImageIndex, setActiveImageIndex, title }: ShowcaseProps) {
+function DesktopShowcase({ gallery, hasGallery, activeImageIndex, setActiveImageIndex, title, tabs }: ShowcaseProps) {
   return (
     <div className="p-4 sm:p-6 flex flex-col items-center bg-warm-alt/30">
       {/* Clean image card — no browser chrome */}
@@ -213,29 +216,21 @@ function DesktopShowcase({ gallery, hasGallery, activeImageIndex, setActiveImage
       {/* Tab switcher */}
       {hasGallery && (
         <div className="flex items-center justify-center gap-3 mt-4">
-          <button
-            onClick={() => setActiveImageIndex(0)}
-            className={`text-xs font-medium px-3 py-1 border transition-all cursor-pointer ${
-              activeImageIndex === 0
-                ? 'border-wine text-wine bg-wine/5'
-                : 'border-warm-border text-carbon-muted hover:text-carbon-text'
-            }`}
-          >
-            Storefront
-          </button>
-          <button
-            onClick={() => setActiveImageIndex(1)}
-            className={`text-xs font-medium px-3 py-1 border transition-all cursor-pointer ${
-              activeImageIndex === 1
-                ? 'border-wine text-wine bg-wine/5'
-                : 'border-warm-border text-carbon-muted hover:text-carbon-text'
-            }`}
-          >
-            Admin Panel
-          </button>
+          {gallery.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActiveImageIndex(i)}
+              className={`text-xs font-medium px-3 py-1 border transition-all cursor-pointer ${
+                activeImageIndex === i
+                  ? 'border-wine text-wine bg-wine/5'
+                  : 'border-warm-border text-carbon-muted hover:text-carbon-text'
+              }`}
+            >
+              {tabs && tabs[i] ? tabs[i] : i === 0 ? 'Storefront' : 'Admin Panel'}
+            </button>
+          ))}
         </div>
       )}
     </div>
   );
 }
-

@@ -63,6 +63,7 @@ export interface Translations {
     title: string;
     category: string;
     description: string;
+    tabs?: string[];
   }>;
   skills: {
     number: string;

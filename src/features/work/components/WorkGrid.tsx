@@ -3,7 +3,7 @@ import { ProjectCard } from './ProjectCard';
 
 interface WorkGridProps {
   projects: ProjectData[];
-  projectTranslations: Record<string, { title: string; category: string; description: string }>;
+  projectTranslations: Record<string, { title: string; category: string; description: string; tabs?: string[] }>;
 }
 
 export function WorkGrid({ projects, projectTranslations }: WorkGridProps) {
@@ -23,6 +23,7 @@ export function WorkGrid({ projects, projectTranslations }: WorkGridProps) {
             title={pt.title}
             category={pt.category}
             description={pt.description}
+            tabs={pt.tabs}
           />
         );
       })}

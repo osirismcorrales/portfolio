@@ -89,6 +89,7 @@ export const es: Translations = {
       category: 'Full Stack / 2025',
       description:
         'Plataforma de comercio electrónico desarrollada con una arquitectura frontend/backend desacoplada (React + Spring Boot), orientada a la gestión integral de productos, usuarios y procesos de compra.',
+      tabs: ['Tienda / Cliente', 'Panel de Administración'],
     },
   },
   skills: {
