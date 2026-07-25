@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@200;300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-warm-bg: #F7F6F2;
+  --color-warm-surface: #FFFFFF;
+  --color-warm-alt: #F0EFEB;
+  --color-warm-border: #E5E3DE;
+  --color-warm-border-light: #D5D3CE;
+
+  --color-carbon-text: #111111;
+  --color-carbon-secondary: #444444;
+  --color-carbon-muted: #777777;
+  --color-carbon-subtle: #AAAAAA;
+
+  --color-wine: #8B1E2D;
+  --color-wine-hover: #A32535;
+  --color-wine-muted: rgba(139, 30, 45, 0.08);
+
+  --font-heading: 'Outfit', 'Inter', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background-color: var(--color-warm-bg);
+    color: var(--color-carbon-text);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+  ::selection {
+    background-color: var(--color-wine);
+    color: #ffffff;
+  }
+}
