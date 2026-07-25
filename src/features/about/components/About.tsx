@@ -88,7 +88,7 @@ export function About({ t }: AboutProps) {
                       {t.about.stats.degreeProgress}
                     </span>
                     <span className="text-[11px] text-carbon-muted tracking-wider uppercase block mt-2">
-                      Licenciatura
+                      {t.about.stats.degreeSublabel}
                     </span>
                   </div>
                   <div>
@@ -96,7 +96,7 @@ export function About({ t }: AboutProps) {
                       {t.about.stats.analystProgress}
                     </span>
                     <span className="text-[11px] text-carbon-muted tracking-wider uppercase block mt-2">
-                      Analista
+                      {t.about.stats.analystSublabel}
                     </span>
                   </div>
                   <div>

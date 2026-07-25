@@ -29,8 +29,10 @@ export const es: Translations = {
     stats: {
       degreeProgress: '59%',
       degreeLabel: 'Licenciatura en Sistemas',
+      degreeSublabel: 'Licenciatura',
       analystProgress: '76%',
       analystLabel: 'Analista Universitario',
+      analystSublabel: 'Analista',
       gpa: '7.54',
       gpaLabel: 'Promedio Académico',
     },

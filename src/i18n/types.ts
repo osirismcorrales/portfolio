@@ -28,8 +28,10 @@ export interface Translations {
     stats: {
       degreeProgress: string;
       degreeLabel: string;
+      degreeSublabel: string;
       analystProgress: string;
       analystLabel: string;
+      analystSublabel: string;
       gpa: string;
       gpaLabel: string;
     };

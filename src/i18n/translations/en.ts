@@ -28,9 +28,11 @@ export const en: Translations = {
     interests: ['Web & Mobile Dev', 'Backend Architecture', 'Algorithms & AI', 'Computer Vision', 'CSCL Research'],
     stats: {
       degreeProgress: '59%',
-      degreeLabel: 'B.S. Information Systems',
+      degreeLabel: 'Information Systems Degree',
+      degreeSublabel: 'Bachelor Degree',
       analystProgress: '76%',
-      analystLabel: 'University Analyst Degree',
+      analystLabel: 'Systems Analyst',
+      analystSublabel: 'Systems Analyst',
       gpa: '7.54',
       gpaLabel: 'Academic GPA (7.54/10)',
     },

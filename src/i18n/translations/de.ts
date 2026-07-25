@@ -28,11 +28,13 @@ export const de: Translations = {
     interests: ['Web & Mobile Entw.', 'Backend-Architektur', 'Algorithmen & KI', 'Computer Vision', 'CSCL-Forschung'],
     stats: {
       degreeProgress: '59%',
-      degreeLabel: 'Licenciatura in Systemen',
+      degreeLabel: 'Studiengang Informationssysteme',
+      degreeSublabel: 'Bachelorstudiengang',
       analystProgress: '76%',
-      analystLabel: 'Universitätsanalyst',
+      analystLabel: 'Hochschulanalyst',
+      analystSublabel: 'Systemanalytiker',
       gpa: '7.54',
-      gpaLabel: 'Notendurchschnitt (7.54/10)',
+      gpaLabel: 'Notendurchschnitt',
     },
   },
   research: {
